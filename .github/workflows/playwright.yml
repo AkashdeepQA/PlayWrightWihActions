@@ -55,14 +55,19 @@ jobs:
       run: |
         mkdir gh-pages-content
         cd gh-pages-content
+        git init
+        git remote add origin https://github.com/${{ github.repository }}.git
         git fetch origin gh-pages
-        git checkout gh-pages
-        git rm -r * --ignore-unmatch
-        xcopy /E /I /Y ..\allure-report\* .\
-        git add .
+        git checkout gh-pages || git checkout --orphan gh-pages
+        git rm -rf . --ignore-unmatch
+        cd ..
+        xcopy /E /I /Y allure-report\* gh-pages-content\
+        cd gh-pages-content
         $currentTimeIST = [System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date), "India Standard Time").ToString("yyyy-MM-dd HH:mm:ss")
+        git add .
         git commit -m "Update Allure Report [$currentTimeIST IST]"
         git push --force origin gh-pages
+      
     
     - uses: actions/upload-artifact@v4
       if: always()
