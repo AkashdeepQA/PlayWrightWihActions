@@ -9,43 +9,39 @@ on:
 jobs:
   test:
     timeout-minutes: 60
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
 
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
         distribution: zulu
         java-version: 17
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps  # Installs Playwright browsers
+
+    - name: Install Allure Commandline
+      run: npm install -g allure-commandline --save-dev
 
     - name: Run Playwright tests
       run: npx playwright test
-    
-    - name: Load test report history
-      uses: actions/checkout@v3
-      if: always()
-      continue-on-error: true
-      with:
-        ref: gh-pages
-        path: history
 
-    - name: Build test report
-      uses: simple-elf/allure-report-action@v1.7
-      if: always()
-      with:
-        gh_pages: history
-        allure_history: history
-        allure_results: allure-results
+    - name: Generate Allure Report
+      run: |
+        allure generate allure-results --clean -o allure-report
 
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
@@ -53,15 +49,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
-        publish_dir: history
+        publish_dir: allure-report
     
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
-
     - uses: actions/upload-artifact@v4
       if: always()
       with:
