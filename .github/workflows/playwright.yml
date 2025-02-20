@@ -55,7 +55,7 @@ jobs:
       run: |
         git fetch origin gh-pages || git checkout --orphan gh-pages
         git checkout gh-pages
-        rm -rf *
+        git rm -r * --ignore-unmatch
         cp -r ../allure-report/* .
         git add .
         git commit -m "Update Allure Report [$(TZ='Asia/Kolkata' date +'%Y-%m-%d %H:%M:%S IST')]"
