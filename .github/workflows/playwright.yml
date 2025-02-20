@@ -44,6 +44,14 @@ jobs:
       run: |
         allure generate allure-results --clean -o allure-report
 
+    - name: Print Current Directory and Contents (Windows)
+      run: |
+        echo "Current Directory:"
+        cd
+        echo "Listing Files:"
+        dir /s
+        shell: cmd
+
     - name: Configure Git
       if: always()
       run: |
