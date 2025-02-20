@@ -56,7 +56,7 @@ jobs:
         mkdir gh-pages-content
         cd gh-pages-content
         git init
-        git remote add origin https://github.com/${{ github.repository }}.git
+        git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         git fetch origin gh-pages
         git checkout gh-pages || git checkout --orphan gh-pages
         git rm -rf . --ignore-unmatch
