@@ -1,4 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","766","Add to cart from product page","chromium","Thu Feb 20 15:36:24 UTC 2025","passed","Thu Feb 20 15:36:24 UTC 2025","","sauceDemoTests.spec.js","",""
-"","6086","Add to cart from summary page","chromium","Thu Feb 20 15:36:17 UTC 2025","passed","Thu Feb 20 15:36:23 UTC 2025","","sauceDemoTests.spec.js","",""
-"","1620","Logout","chromium","Thu Feb 20 15:36:24 UTC 2025","passed","Thu Feb 20 15:36:26 UTC 2025","","sauceDemoTests.spec.js","",""
+"","5814","Add to cart from summary page","chromium","Thu Feb 20 16:04:46 UTC 2025","passed","Thu Feb 20 16:04:51 UTC 2025","","sauceDemoTests.spec.js","",""
+"","1660","Logout","chromium","Thu Feb 20 16:04:52 UTC 2025","passed","Thu Feb 20 16:04:54 UTC 2025","","sauceDemoTests.spec.js","",""
+"","828","Add to cart from product page","chromium","Thu Feb 20 16:04:52 UTC 2025","passed","Thu Feb 20 16:04:52 UTC 2025","","sauceDemoTests.spec.js","",""
