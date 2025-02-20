@@ -44,14 +44,6 @@ jobs:
       run: |
         allure generate allure-results --clean -o allure-report
 
-    - name: Print Current Directory and Files (PowerShell)
-      shell: pwsh
-      run: |
-        Write-Output "Current Directory:"
-        Get-Location
-        Write-Output "Listing Files:"
-        Get-ChildItem -Recurse
-    
     - name: Configure Git
       if: always()
       run: |
@@ -63,7 +55,7 @@ jobs:
       run: |
         mkdir gh-pages-content
         cd gh-pages-content
-        git fetch origin gh-pages || git checkout --orphan gh-pages
+        git fetch origin gh-pages
         git checkout gh-pages
         git rm -r * --ignore-unmatch
         xcopy /E /I /Y ..\allure-report\* .\
