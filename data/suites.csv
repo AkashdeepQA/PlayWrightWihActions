@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8005","Logout","chromium","Thu Feb 20 10:29:23 UTC 2025","failed","Thu Feb 20 10:29:31 UTC 2025","","makeMyTripTests.spec.js","",""
+"","1666","Add to vard from product page","chromium","Thu Feb 20 10:29:21 UTC 2025","passed","Thu Feb 20 10:29:23 UTC 2025","","makeMyTripTests.spec.js","",""
+"","2189","Add to card from summary page","chromium","Thu Feb 20 10:29:19 UTC 2025","passed","Thu Feb 20 10:29:21 UTC 2025","","makeMyTripTests.spec.js","",""
