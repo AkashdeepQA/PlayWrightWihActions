@@ -44,14 +44,14 @@ jobs:
       run: |
         allure generate allure-results --clean -o allure-report
 
-    - name: Print Current Directory and Contents (Windows)
+    - name: Print Current Directory and Files (PowerShell)
+      shell: pwsh
       run: |
-        echo "Current Directory:"
-        cd
-        echo "Listing Files:"
-        dir /s
-        shell: cmd
-
+        Write-Output "Current Directory:"
+        Get-Location
+        Write-Output "Listing Files:"
+        Get-ChildItem -Recurse
+    
     - name: Configure Git
       if: always()
       run: |
