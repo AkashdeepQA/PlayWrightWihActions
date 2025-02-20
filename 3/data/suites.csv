@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Feb 20 11:34:18 GMT 2025","Thu Feb 20 11:34:19 GMT 2025","776","chromium","makeMyTripTests.spec.js","","","","Add to card from summary page",""
+"passed","Thu Feb 20 11:34:19 GMT 2025","Thu Feb 20 11:34:20 GMT 2025","628","chromium","makeMyTripTests.spec.js","","","","Add to vard from product page",""
+"failed","Thu Feb 20 11:34:20 GMT 2025","Thu Feb 20 11:34:27 GMT 2025","6693","chromium","makeMyTripTests.spec.js","","","","Logout",""
