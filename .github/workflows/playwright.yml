@@ -61,10 +61,12 @@ jobs:
     - name: Push Allure Report to gh-pages
       if: always()
       run: |
+        mkdir gh-pages-content
+        cd gh-pages-content
         git fetch origin gh-pages || git checkout --orphan gh-pages
         git checkout gh-pages
         git rm -r * --ignore-unmatch
-        cp -r allure-report/* .
+        xcopy /E /I /Y ..\allure-report\* .\
         git add .
         $currentTimeIST = [System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date), "India Standard Time").ToString("yyyy-MM-dd HH:mm:ss")
         git commit -m "Update Allure Report [$currentTimeIST IST]"
