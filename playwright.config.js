@@ -28,14 +28,15 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['allure-playwright'],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     video: 'on',
-    // launchOptions: {
-    //   slowMo: 1000,
+     launchOptions: {
+       slowMo: 1000,
 
-    // },
+     },
     trace: 'on', // Enables tracing for debugging
     screenshot: 'only-on-failure', // Captures screenshots on failures
     /* Base URL to use in actions like `await page.goto('/')`. */
