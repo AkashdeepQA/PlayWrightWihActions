@@ -36,20 +36,6 @@ jobs:
     - name: Install Allure Commandline
       run: npm install -g allure-commandline --save-dev
 
-    - name: Load test report history from gh-pages branch
-      uses: actions/checkout@v3
-      if: always()
-      continue-on-error: true
-      with: 
-        ref: gh-pages
-        path: history-from-branch
-
-    - name: Copy history from gh-pages branch to allure-results folder
-      if: always()
-      run: |
-        mkdir allure-results\history
-        xcopy .\history-from-branch\history\* .\allure-results\history /E /I /Y
-
     - name: Run Playwright tests
       run: npx playwright test
 
