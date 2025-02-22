@@ -1,4 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","6714","Logout from the app","chromium","Sat Feb 22 18:07:14 UTC 2025","passed","Sat Feb 22 18:07:21 UTC 2025","","demoPractice.spec.js","",""
-"","7769","Add to cart from product page","chromium","Sat Feb 22 18:07:07 UTC 2025","passed","Sat Feb 22 18:07:14 UTC 2025","","demoPractice.spec.js","",""
-"","6840","Add to cart from catalog","chromium","Sat Feb 22 18:07:00 UTC 2025","passed","Sat Feb 22 18:07:06 UTC 2025","","demoPractice.spec.js","",""
+"","813","Add to cart from product page","chromium","Sat Feb 22 18:22:12 UTC 2025","passed","Sat Feb 22 18:22:13 UTC 2025","","demoPractice.spec.js","",""
+"","6501","Add to cart from catalog","chromium","Sat Feb 22 18:22:06 UTC 2025","passed","Sat Feb 22 18:22:12 UTC 2025","","demoPractice.spec.js","",""
+"","1669","Logout from the app","chromium","Sat Feb 22 18:22:13 UTC 2025","passed","Sat Feb 22 18:22:15 UTC 2025","","demoPractice.spec.js","",""
