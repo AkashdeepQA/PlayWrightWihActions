@@ -32,3 +32,4 @@ test('Logout from the app', async ({ page }) => {
   await page.locator('[data-test="logout-sidebar-link"]').click();
   await expect(page.locator('[data-test="login-button"]')).toBeEnabled();
 });
+//Test
