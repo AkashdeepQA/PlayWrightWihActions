@@ -33,3 +33,4 @@ test('Logout from the app', async ({ page }) => {
   await expect(page.locator('[data-test="login-button"]')).toBeEnabled();
 });
 //Test
+//Edit to trigger gh action
