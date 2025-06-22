@@ -34,3 +34,4 @@ test('Logout from the app', async ({ page }) => {
 });
 //Test
 //Edit to trigger gh action
+//Editing to trigger pipeline
